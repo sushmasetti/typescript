@@ -3,7 +3,6 @@ class Movie
 {
 public hero:String="Rajini";
 
-
 }
 class Movie1 extends Movie{
 public director:String="shankar";
