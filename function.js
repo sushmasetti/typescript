@@ -81,5 +81,22 @@ console.log(out1(1)(2, 3)); // rather than writing the whole code using multiple
 var out2 = function (x, y) { return x + y; };
 console.log(out2(2, 3));
 var exp = "2+3*5";
-var str = exp.split('+');
-console.log(str);
+//var str=exp.split('+');
+//console.log(str);
+/******************/
+var q = "7+2*4";
+var result = "";
+var num;
+for (var i = 0; i < q.length - 1; i++) {
+    if (q[i] == '*') {
+        result = "(" + q[i - 1] + "," + q[i + 1] + ")";
+        num = eval(q[i - 1] + "*" + q[i + 1]);
+        q = q.slice(0, i - 1) + q.slice(i + 2) + eval(q[i - 1] + "*" + q[i + 1]);
+    }
+}
+for (var i = 0; i < q.length - 1; i++) {
+    if (q[i] == '+') {
+        result = ("(" + q[i - 1] + ")=>" + result + "=>" + eval(q[i - 1] + "+" + num));
+    }
+}
+console.log(result);

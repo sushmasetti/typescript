@@ -18,3 +18,4 @@ var fundoo = function () {
 console.log(fun());
 console.log(fundoo());
 console.log(arr);
+
