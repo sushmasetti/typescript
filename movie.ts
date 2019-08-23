@@ -8,9 +8,9 @@ class Movie1 extends Movie{
 public director:String="shankar";
 public movie:String="Robo";
 }
-var m = new Movie();
-console.log(m.hero);
+var mv = new Movie();
+console.log(mv.hero);
 
-var m1 = new Movie1();
-console.log(m1.movie);
-console.log(m1.director);
+var mv1 = new Movie1();
+console.log(mv1.movie);
+console.log(mv1.director);
